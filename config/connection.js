@@ -3,7 +3,7 @@
 let connection;
 
 if (process.env.NODE_ENV === 'production') {
-  connection = mysql.createConnection(provess.env.JAWSDB_URL).promise();
+  connection = mysql.createConnection(process.env.JAWSDB_URL).promise();
 } else {
   connection = mysql.createConnection({
     host: 'localhost',
